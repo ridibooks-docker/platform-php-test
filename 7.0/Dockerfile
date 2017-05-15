@@ -22,7 +22,7 @@ RUN apt-get install nodejs -yqq
 # enable php ext
 RUN apt-get install -y zlib1g-dev libicu-dev g++ && \
 	docker-php-ext-configure intl && \
-	docker-php-ext-install sockets pdo_mysql intl zip && \
+	docker-php-ext-install sockets pdo_mysql intl zip bcmath && \
 	pecl install xdebug && docker-php-ext-enable xdebug
 
 # install phpunit
