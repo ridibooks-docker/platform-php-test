@@ -8,6 +8,9 @@ RUN apt-get install software-properties-common -yqq
 RUN apt-add-repository ppa:ansible/ansible -y
 RUN apt-get install ansible -yqq
 
+#install docker-php-ext
+RUN docker-php-ext-install shmop
+
 # install provision package
 RUN apt-get install apache2 sudo -yqq && \
 	apt-get install php7.0 php-cli php-curl php-gd php-mbstring php-mcrypt \
