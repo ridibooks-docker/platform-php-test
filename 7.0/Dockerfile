@@ -8,9 +8,6 @@ RUN apt-get install software-properties-common -yqq
 RUN apt-add-repository ppa:ansible/ansible -y
 RUN apt-get install ansible -yqq
 
-#install docker-php-ext
-RUN docker-php-ext-install shmop
-
 # install provision package
 RUN apt-get install apache2 sudo -yqq && \
 	apt-get install php7.0 php-cli php-curl php-gd php-mbstring php-mcrypt \
@@ -25,7 +22,7 @@ RUN apt-get install nodejs -yqq
 # enable php ext
 RUN apt-get install -y zlib1g-dev libicu-dev g++ && \
 	docker-php-ext-configure intl && \
-	docker-php-ext-install sockets pdo_mysql intl zip bcmath && \
+	docker-php-ext-install sockets pdo_mysql intl zip bcmath shmop && \
 	pecl install xdebug && docker-php-ext-enable xdebug
 
 # install phpunit
