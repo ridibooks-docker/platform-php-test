@@ -4,6 +4,7 @@ Docker image for platform team
 ## Supported Docker Images
 
 * ridibooks/platform-php-test:7.0 ([Dockerfile](https://github.com/ridibooks-docker/platform-php-test/blob/master/7.0/Dockerfile))
+* ridibooks/platform-php-test:7.1 ([Dockerfile](https://github.com/ridibooks-docker/platform-php-test/blob/master/7.1/Dockerfile))
 
 ## Test with Gitlab Runner
 
