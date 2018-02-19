@@ -5,14 +5,14 @@ RUN apt-get update -y
 
 # install ansible
 RUN apt-get install software-properties-common -yqq
-RUN apt-add-repository ppa:ansible/ansible -y
+RUN apt-add-repository ppa:ansible/ansible ppa:ondrej/php -y
 RUN apt-get install ansible -yqq
 
 # install provision package
 RUN apt-get install apache2 sudo -yqq && \
-	apt-get install php7.1 php-cli php-curl php-gd php-mbstring php-mcrypt \
-		php-mysql libapache2-mod-php7.1 php-apcu php-intl php-imagick php-bcmath \
-		php-xml php7.1-zip -yqq && \
+	apt-get install php7.1 php7.1-cli php7.1-curl php7.1-gd php7.1-mbstring php7.1-mcrypt \
+		php7.1-mysql libapache2-mod-php7.1 php-apcu php7.1-intl php-imagick php7.1-bcmath \
+		php7.1-xml php7.1-zip -yqq && \
 	apt-get install zip imagemagick gifsicle jpegoptim optipng poppler-utils -yqq
 
 # install node
