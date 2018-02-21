@@ -26,5 +26,5 @@ RUN apt-get install -y zlib1g-dev libicu-dev g++ && \
 	pecl install xdebug && docker-php-ext-enable xdebug
 
 # install phpunit
-ADD https://phar.phpunit.de/phpunit.phar /usr/local/bin/phpunit 
+ADD https://phar.phpunit.de/phpunit-6.5.6.phar /usr/local/bin/phpunit 
 RUN chmod +x /usr/local/bin/phpunit
