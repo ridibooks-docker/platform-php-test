@@ -5,7 +5,11 @@ RUN apt-get update -y
 
 # install ansible
 RUN apt-get install software-properties-common -yqq
-RUN apt-add-repository ppa:ansible/ansible ppa:ondrej/php -y
+RUN apt-add-repository ppa:ansible/ansible -y
+RUN LC_ALL=C.UTF-8 apt-add-repository ppa:ondrej/php -y
+
+RUN apt-get update -y
+
 RUN apt-get install ansible -yqq
 
 # install provision package
